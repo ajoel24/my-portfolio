@@ -1,0 +1,9 @@
+.git*
+.vscode
+.idea
+.svelte-kit
+build
+node_modules
+.eslint*
+.prettier*
+Jenkinsfile
