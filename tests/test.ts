@@ -7,5 +7,5 @@ test('index page has expected h1', async ({ page }) => {
 
 test('index page has sum', async ({ page }) => {
 	await page.goto('/');
-	await expect(page.getByRole('heading', { name: '3' })).toBeVisible();
+	await expect(page.getByRole('heading', { name: '4' })).toBeVisible();
 });
