@@ -5,6 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: deploy-static
+      target: deploy-node
     ports:
       - "9010:80"
