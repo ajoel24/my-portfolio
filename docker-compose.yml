@@ -7,4 +7,4 @@ services:
       dockerfile: Dockerfile
       target: deploy-node
     ports:
-      - "9010:80"
+      - "9010:3000"
