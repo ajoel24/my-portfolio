@@ -1,6 +1,6 @@
 @Library("valaikanini-cicd@feature/TF-15") _
 
-applicationPipeline(
+def properties = [
     gitUrl: "git@github.com:ajoel24/my-portfolio.git",
     imageRepository: "ajoel24/my-portfolio",
     snykProjectName: "my-portfolio",
@@ -8,4 +8,6 @@ applicationPipeline(
     ftpDeployment: [
         folder: 'build-static'
     ]
-)
+]
+
+applicationPipeline(properties)
