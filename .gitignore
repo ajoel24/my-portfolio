@@ -7,7 +7,7 @@ playwright-report
 coverage
 .env
 .env.*
-.idea
+/.idea
 .svelte-kit
 !.env.example
 vite.config.js.timestamp-*
