@@ -1,11 +1,7 @@
-FROM node:lts-alpine3.17 AS build
+FROM node:lts-alpine3.17
 WORKDIR /app
-COPY . .
-RUN npm install
-RUN npm run build
-
-FROM nginx:1.24.0-alpine3.17 AS deploy-static
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
-COPY --from=build /app/build .
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+ADD build-node build
+COPY package.json .
+RUN yarn --prod
+EXPOSE 3000
+CMD [ "node", "build/index.js" ]
