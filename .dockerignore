@@ -2,7 +2,6 @@
 .vscode
 .idea
 .svelte-kit
-build*
 node_modules
 .vercel
 playwright-report
