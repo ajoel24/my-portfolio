@@ -5,5 +5,8 @@ applicationPipeline(
     imageRepository: "ajoel24/my-portfolio",
     snykProjectName: "my-portfolio",
     projectType: "svelte-kit",
-    deploymentFolder: "build-static"
+    ftpDeployment: [
+        folder: 'build-static',
+        clearRemote: true
+    ]
 )
