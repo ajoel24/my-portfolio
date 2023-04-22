@@ -5,7 +5,7 @@ def properties = [
     imageRepository: "ajoel24/my-portfolio",
     snykProjectName: "my-portfolio",
     projectType: "svelte-kit",
-    ftpDeploymentFolder: "build-static"
+    deploymentFolder: "build-static"
 ]
 
 applicationPipeline(properties)
