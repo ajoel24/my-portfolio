@@ -4,5 +4,8 @@ applicationPipeline(
     gitUrl: "git@github.com:ajoel24/my-portfolio.git",
     imageRepository: "ajoel24/my-portfolio",
     snykProjectName: "my-portfolio",
-    projectType: "svelte-kit"
+    projectType: "svelte-kit",
+    ftpDeployment: [
+        folder: 'build-static'
+    ]
 )
