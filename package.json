@@ -38,5 +38,9 @@
 		"vite": "^4.2.0",
 		"vitest": "^0.30.1"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@svelteuidev/composables": "^0.11.1",
+		"@svelteuidev/core": "^0.11.1"
+	}
 }
