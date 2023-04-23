@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  app:
+    image: ${IMAGE}
+    environment:
+      VIRTUAL_HOST: andrew-joel.local
+      VIRTUAL_PORT: 3000
+    networks:
+      - local-network
+
+networks:
+  local-network:
+    external: true
