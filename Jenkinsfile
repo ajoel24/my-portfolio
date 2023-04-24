@@ -1,4 +1,4 @@
-@Library("valaikanini-cicd@1.0.0") _
+@Library("valaikanini-cicd@v1.0.0") _
 
 applicationPipeline(
     gitUrl: "git@github.com:ajoel24/my-portfolio.git",
