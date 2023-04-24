@@ -1,4 +1,4 @@
-@Library("valaikanini-cicd@feature/TF-15") _
+@Library("valaikanini-cicd@1.0.0") _
 
 applicationPipeline(
     gitUrl: "git@github.com:ajoel24/my-portfolio.git",
