@@ -1,7 +1,7 @@
 <script>
-    import { SvelteUIProvider } from '@svelteuidev/core';
+    import '../css/normalize.css'
+    import Navbar from "../components/Navbar.svelte";
 </script>
 
-<SvelteUIProvider withNormalizeCss withGlobalStyles>
-    <slot />
-</SvelteUIProvider>
+<Navbar />
+<slot />

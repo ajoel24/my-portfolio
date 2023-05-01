@@ -1,8 +1,23 @@
-<script lang="ts">
-    export let name: string
-    import {Card} from '@svelteuidev/core'
+<script>
+  import Container from "./Container.svelte";
 </script>
 
-<Card>
-  <h1>Hello! {name}</h1>
-</Card>
+<Container>
+  <section class="welcome-content">
+    <h1>Hey there! Welcome to my site.</h1>
+    <p>I&lsquo;m a back-end developer by trade. I can do some frontend as well. Please feel free to explore my site, as
+      I constantly share my ideas here.</p>
+  </section>
+</Container>
+
+<style>
+    .welcome-content {
+        color: var(--foreground-color);
+        font-family: 'Rubik', sans-serif;
+        line-height: 1.25;
+    }
+
+    .welcome-content p {
+        font-size: 1.25rem;
+    }
+</style>
