@@ -1,5 +1,5 @@
 <script>
-  import Container from "../../components/Container.svelte";
+  import { Card, CardBody, CardLink, CardSubtitle, CardTitle, Column, Container, Row } from "sveltestrap";
 
   export let data;
 </script>
@@ -11,27 +11,24 @@
 </svelte:head>
 
 <Container>
-  <section class="blog-content">
-    <h1>This is my blog page.</h1>
-  </section>
-  params
-  <ul>
-    {#each data.posts as post}
-      <li>
-        <h2>
-          <a href="/blog/{post.path}">
-            {post.meta.title}
-          </a>
-        </h2>
-        Published {post.meta.date}
-      </li>
-    {/each}
-  </ul>
+  <Row>
+    <Column>
+      <h1 class="text-light">This is my blog page!</h1>
+    </Column>
+  </Row>
 </Container>
-
-<style>
-    .blog-content {
-        color: var(--foreground-color);
-        font-family: 'Rubik', sans-serif;
-    }
-</style>
+<Container class="my-4">
+  <Row class="row-cols-1 row-cols-md-2">
+    {#each data.posts as post}
+      <Column>
+        <Card class="bg-light text-dark h-100">
+          <CardLink href={`/blog/${post.path}`}>
+            <CardTitle>{post.meta.title}</CardTitle>
+          </CardLink>
+          <CardSubtitle>Posted on: {post.meta.date}</CardSubtitle>
+          <CardBody>{post.meta.excerpt}</CardBody>
+        </Card>
+      </Column>
+    {/each}
+  </Row>
+</Container>

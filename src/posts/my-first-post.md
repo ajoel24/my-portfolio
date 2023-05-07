@@ -6,3 +6,5 @@ excerpt: "This is my first post!"
 ---
 
 # My first post!
+
+This is my first blog post written in Markdown

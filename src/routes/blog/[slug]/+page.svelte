@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Post } from "$lib/types/Post";
+  import { Column, Container, Row } from "sveltestrap";
 
   export let data: Post;
 </script>
@@ -12,8 +13,12 @@
 </svelte:head>
 
 
-<article>
-  <h1>{ data.title }</h1>
-  <p>Published: {data.date}</p>
-  <svelte:component this={data.content} />
-</article>
+<Container>
+  <Row>
+    <Column class="text-white">
+      <h1>{ data.title }</h1>
+      <p>Published: {data.date}</p>
+      <svelte:component this={data.content} />
+    </Column>
+  </Row>
+</Container>

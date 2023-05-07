@@ -1,5 +1,5 @@
 <script>
-  import Container from "../components/Container.svelte";
+  import { Column, Container, Row } from "sveltestrap";
 </script>
 
 <svelte:head>
@@ -9,21 +9,13 @@
 </svelte:head>
 
 <Container>
-  <section class="welcome-content">
-    <h1>Hey there! Welcome to my site.</h1>
-    <p>I&lsquo;m a back-end developer by trade. I can do some frontend as well. Please feel free to explore my site, as
-      I constantly share my ideas here.</p>
-  </section>
+  <Row>
+    <Column class="text-white">
+      <h1>Hey there! Welcome to my site.</h1>
+      <p>I&lsquo;m a back-end developer by trade. I can do some frontend as well. Please feel free to explore my site,
+        as
+        I constantly share my ideas here.</p>
+    </Column>
+  </Row>
 </Container>
 
-<style>
-    .welcome-content {
-        color: var(--foreground-color);
-        font-family: 'Rubik', sans-serif;
-        line-height: 1.25;
-    }
-
-    .welcome-content p {
-        font-size: 1.25rem;
-    }
-</style>
